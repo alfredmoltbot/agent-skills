@@ -49,6 +49,17 @@ Para utilizar cualquier skill de este repositorio en Claude Code:
 
 4. **Desarrollo guiado** - Una vez cargado, el agente aplicará los principios y flujos de trabajo documentados en el skill para ayudarte en tu tarea.
 
+### Cómo usar los skills en Gemini CLI
+
+Para utilizar estos skills en Gemini CLI:
+
+1. **Carga del skill** - Solicita explícitamente al agente que lea el archivo `SKILL.md` principal del skill. Puedes usar una ruta relativa o absoluta:
+   ```
+   Lee y adopta las prácticas definidas en agent-skills/fastapi-mysql-alembic/SKILL.md
+   ```
+
+2. **Desarrollo guiado** - El agente incorporará el contenido del archivo a su contexto de conversación y seguirá las directrices especificadas para asistirte.
+
 ### Cómo usar los skills en antigravity
 
 Para utilizar cualquier skill de este repositorio en antigravity:
