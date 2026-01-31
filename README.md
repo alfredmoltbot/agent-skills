@@ -12,6 +12,19 @@ Aquí se irán dejando documentados los patrones, técnicas y mejores prácticas
 
 ## Uso
 
+### Cómo usar los skills en Kimi Code CLI
+
+Para utilizar cualquier skill de este repositorio en Kimi Code CLI:
+
+1. **Carga del skill** - Usa el slash command `/skill` para cargar el skill que necesites:
+   ```
+   /skill /ruta/al/agent-skills/fastapi-mysql-alembic
+   ```
+
+2. **Lectura automática** - Al cargar el skill, Kimi Code CLI lee automáticamente el archivo `SKILL.md` del directorio, proporcionando al agente el contexto, patrones y mejores prácticas específicas.
+
+3. **Desarrollo guiado** - Una vez cargado, el agente aplicará los principios y flujos de trabajo documentados en el skill para ayudarte en tu tarea.
+
 ### Cómo usar los skills en Claude Code
 
 Para utilizar cualquier skill de este repositorio en Claude Code:
