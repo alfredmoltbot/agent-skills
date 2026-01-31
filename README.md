@@ -73,6 +73,19 @@ Para utilizar cualquier skill de este repositorio en antigravity:
 
 3. **Desarrollo guiado** - Una vez cargado, el agente aplicará los principios y flujos de trabajo documentados en el skill para ayudarte en tu tarea.
 
+### Cómo usar los skills en opencode
+
+Para utilizar cualquier skill de este repositorio en opencode:
+
+1. **Carga del skill** - Usa el slash command `/skill` para cargar el skill que necesites:
+   ```
+   /skill /ruta/al/agent-skills/fastapi-mysql-alembic
+   ```
+
+2. **Lectura automática** - Al cargar el skill, opencode lee automáticamente el archivo `SKILL.md` del directorio, proporcionando al agente el contexto, patrones y mejores prácticas específicas.
+
+3. **Desarrollo guiado** - Una vez cargado, el agente aplicará los principios y flujos de trabajo documentados en el skill para ayudarte en tu tarea.
+
 ### Uso sin configuración
 
 Alternativamente, puedes cargar un skill directamente usando su ruta completa sin necesidad de configuración previa:
