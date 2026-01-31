@@ -86,6 +86,36 @@ Para utilizar cualquier skill de este repositorio en opencode:
 
 3. **Desarrollo guiado** - Una vez cargado, el agente aplicará los principios y flujos de trabajo documentados en el skill para ayudarte en tu tarea.
 
+### Cómo usar los skills en Goose
+
+Para utilizar cualquier skill de este repositorio en [Goose](https://github.com/block/goose):
+
+1. **Habilita la extensión skills** - Asegúrate de que la extensión `skills` esté habilitada en tu configuración de Goose (`~/.config/goose/config.yaml`):
+   ```yaml
+   extensions:
+     skills:
+       enabled: true
+       type: platform
+       name: skills
+       description: Load and use skills from relevant directories
+       bundled: true
+   ```
+
+2. **Inicia sesión en el directorio del skill** - Navega al directorio que contiene el skill y ejecuta Goose desde ahí:
+   ```bash
+   cd /ruta/al/agent-skills/fastapi-mysql-alembic
+   goose session
+   ```
+
+3. **Lectura automática** - Al iniciar la sesión, Goose detecta y lee automáticamente el archivo `SKILL.md` del directorio actual, proporcionando al agente el contexto, patrones y mejores prácticas específicas.
+
+4. **Carga manual (alternativa)** - Si ya tienes una sesión activa, puedes pedirle a Goose que lea el skill directamente:
+   ```
+   Lee y adopta las prácticas definidas en /ruta/al/agent-skills/fastapi-mysql-alembic/SKILL.md
+   ```
+
+5. **Desarrollo guiado** - Una vez cargado, el agente aplicará los principios y flujos de trabajo documentados en el skill para ayudarte en tu tarea.
+
 ### Uso sin configuración
 
 Alternativamente, puedes cargar un skill directamente usando su ruta completa sin necesidad de configuración previa:
