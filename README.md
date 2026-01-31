@@ -25,6 +25,11 @@ Para utilizar cualquier skill de este repositorio en Kimi Code CLI:
 
 3. **Desarrollo guiado** - Una vez cargado, el agente aplicará los principios y flujos de trabajo documentados en el skill para ayudarte en tu tarea.
 
+### Cómo usar los skills en Kilo Code
+
+Para utilizar skills en Kilo Code, consulta la documentación oficial:
+https://kilo.ai/docs/customize/skills
+
 ### Cómo usar los skills en Claude Code
 
 Para utilizar cualquier skill de este repositorio en Claude Code:
@@ -99,17 +104,6 @@ Para utilizar estos skills en VS Code con GitHub Copilot, tienes dos opciones:
 @workspace Necesito crear un proyecto FastAPI siguiendo las prácticas del SKILL.md. 
 Lee primero SKILL.md y luego ayúdame a iniciar el proyecto.
 ```
-
-### Cómo usar los skills en Gemini CLI
-
-Para utilizar estos skills en Gemini CLI:
-
-1. **Carga del skill** - Solicita explícitamente al agente que lea el archivo `SKILL.md` principal del skill. Puedes usar una ruta relativa o absoluta:
-   ```
-   Lee y adopta las prácticas definidas en agent-skills/fastapi-mysql-alembic/SKILL.md
-   ```
-
-2. **Desarrollo guiado** - El agente incorporará el contenido del archivo a su contexto de conversación y seguirá las directrices especificadas para asistirte.
 
 ### Cómo usar los skills en antigravity
 
