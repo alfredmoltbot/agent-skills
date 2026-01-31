@@ -49,6 +49,57 @@ Para utilizar cualquier skill de este repositorio en Claude Code:
 
 4. **Desarrollo guiado** - Una vez cargado, el agente aplicará los principios y flujos de trabajo documentados en el skill para ayudarte en tu tarea.
 
+### Cómo usar los skills en Visual Studio Code (GitHub Copilot)
+
+Para utilizar estos skills en VS Code con GitHub Copilot, tienes dos opciones:
+
+#### Opción 1: Copiar el skill en `.github/skills/` (Recomendado)
+
+1. **Copia el skill a tu proyecto** - Crea un directorio `.github/skills/` en tu proyecto y copia el skill:
+   ```bash
+   mkdir -p .github/skills
+   cp -r /ruta/al/agent-skills/fastapi-mysql-alembic .github/skills/
+   ```
+
+2. **Inicia Copilot Chat** - Abre el panel de Copilot Chat (`Ctrl+Alt+I` o `Cmd+Alt+I` en Mac).
+
+3. **Referencia el skill** - GitHub Copilot detectará automáticamente los archivos en `.github/skills/`. Simplemente menciónalos:
+   ```
+   @workspace Lee y adopta las prácticas definidas en .github/skills/fastapi-mysql-alembic/SKILL.md
+   ```
+
+4. **Desarrollo guiado** - Copilot aplicará los principios documentados en el skill para tu proyecto.
+
+**Ventajas:**
+- El skill queda integrado en tu proyecto
+- Puedes versionarlo junto a tu código
+- Facilita la colaboración en equipo
+
+#### Opción 2: Abrir el workspace del skill directamente
+
+1. **Abre el workspace del skill** - Abre el directorio del skill en VS Code:
+   ```bash
+   code /ruta/al/agent-skills/fastapi-mysql-alembic
+   ```
+
+2. **Inicia Copilot Chat** - Abre el panel de Copilot Chat (`Ctrl+Alt+I` o `Cmd+Alt+I` en Mac).
+
+3. **Usa el comando @workspace** - Menciona el archivo del skill en tu conversación:
+   ```
+   @workspace Lee y adopta las prácticas definidas en SKILL.md
+   ```
+
+4. **Referencias específicas** - Puedes referenciar archivos específicos del skill:
+   ```
+   @workspace #file:SKILL.md #file:references/patrones.md
+   ```
+
+**Ejemplo de uso:**
+```
+@workspace Necesito crear un proyecto FastAPI siguiendo las prácticas del SKILL.md. 
+Lee primero SKILL.md y luego ayúdame a iniciar el proyecto.
+```
+
 ### Cómo usar los skills en Gemini CLI
 
 Para utilizar estos skills en Gemini CLI:
