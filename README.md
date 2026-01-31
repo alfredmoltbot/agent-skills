@@ -12,18 +12,36 @@ Aquí se irán dejando documentados los patrones, técnicas y mejores prácticas
 
 ## Uso
 
-### Cómo usar los skills en Kimi Code CLI
+### Cómo usar los skills en Claude Code
 
-Para utilizar cualquier skill de este repositorio en Kimi Code CLI:
+Para utilizar cualquier skill de este repositorio en Claude Code:
 
-1. **Carga del skill** - Usa el slash command `/skill` para cargar el skill que necesites:
+1. **Configura el skill path** - Añade el repositorio a tu configuración de Claude Code:
+
+   En tu archivo de configuración `~/.claude/config.json`:
+   ```json
+   {
+     "skills": [
+       "/ruta/al/agent-skills/*"
+     ]
+   }
    ```
-   /skill /ruta/al/agent-skills/fastapi-mysql-alembic
+
+2. **Usa el slash command** - Invoca el skill directamente desde Claude Code:
+   ```
+   /skill fastapi-mysql-alembic
    ```
 
-2. **Lectura automática** - Al cargar el skill, Kimi Code CLI lee automáticamente el archivo `SKILL.md` del directorio, proporcionando al agente el contexto, patrones y mejores prácticas específicas.
+3. **Lectura automática** - Al invocar el skill, Claude Code lee automáticamente el archivo `SKILL.md` del directorio correspondiente, proporcionando al agente el contexto, patrones y mejores prácticas específicas.
 
-3. **Desarrollo guiado** - Una vez cargado, el agente aplicará los principios y flujos de trabajo documentados en el skill para ayudarte en tu tarea.
+4. **Desarrollo guiado** - Una vez cargado, el agente aplicará los principios y flujos de trabajo documentados en el skill para ayudarte en tu tarea.
+
+### Uso sin configuración
+
+Alternativamente, puedes cargar un skill directamente usando su ruta completa sin necesidad de configuración previa:
+```
+/skill /ruta/al/agent-skills/fastapi-mysql-alembic
+```
 
 ### Estructura de un skill
 
