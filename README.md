@@ -14,16 +14,54 @@ Aquí se irán dejando documentados los patrones, técnicas y mejores prácticas
 
 ### Cómo usar los skills en Kimi Code CLI
 
-Para utilizar cualquier skill de este repositorio en Kimi Code CLI:
+Kimi Code CLI descubre los skills automáticamente desde directorios específicos. Hay tres niveles de skills:
 
-1. **Carga del skill** - Usa el slash command `/skill` para cargar el skill que necesites:
-   ```
-   /skill /ruta/al/agent-skills/fastapi-mysql-alembic
-   ```
+**1. Skills a nivel de usuario** (disponibles en todos los proyectos):
 
-2. **Lectura automática** - Al cargar el skill, Kimi Code CLI lee automáticamente el archivo `SKILL.md` del directorio, proporcionando al agente el contexto, patrones y mejores prácticas específicas.
+Kimi Code CLI busca skills en los siguientes directorios (en orden de prioridad):
+- `~/.config/agents/skills/` (recomendado)
+- `~/.agents/skills/`
+- `~/.kimi/skills/`
 
-3. **Desarrollo guiado** - Una vez cargado, el agente aplicará los principios y flujos de trabajo documentados en el skill para ayudarte en tu tarea.
+Para usar un skill de este repositorio a nivel global:
+```bash
+mkdir -p ~/.config/agents/skills
+ln -s /ruta/al/agent-skills/fastapi-mysql-alembic ~/.config/agents/skills/
+```
+
+**2. Skills a nivel de proyecto** (solo disponibles en el proyecto actual):
+
+Kimi Code CLI busca skills en los siguientes directorios dentro del proyecto:
+- `.agents/skills/` (recomendado)
+- `.kimi/skills/`
+
+Para usar un skill de este repositorio en un proyecto específico:
+```bash
+mkdir -p .agents/skills
+ln -s /ruta/al/agent-skills/fastapi-mysql-alembic .agents/skills/
+```
+
+**3. Especificar un directorio de skills personalizado**:
+
+También puedes usar el flag `--skills-dir` para cargar skills desde cualquier ubicación:
+```bash
+kimi --skills-dir /ruta/al/agent-skills
+```
+
+**Uso de los skills:**
+
+Una vez configurados los skills, puedes cargarlos usando el slash command `/skill:`:
+
+```
+/skill:fastapi-mysql-alembic
+```
+
+También puedes añadir texto adicional después del comando:
+```
+/skill:fastapi-mysql-alembic Necesito crear un endpoint para gestionar usuarios
+```
+
+**Nota:** Kimi Code CLI también detecta y lee automáticamente los skills relevantes según el contexto de la conversación, por lo que no siempre es necesario invocarlos manualmente.
 
 ### Cómo usar los skills en Kilo Code
 
