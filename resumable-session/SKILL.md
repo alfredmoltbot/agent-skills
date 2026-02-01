@@ -3,14 +3,14 @@ name: Resumable Session
 description: Instructions to resume development on the project.
 ---
 
-# Session Resume - PremiumTel Development
+# Session Resume - Project Development
 
 Cada vez que se reanude el desarrollo del proyecto de este workspace, siga estas instrucciones para ponerse al día rápidamente con el estado actual y las tareas pendientes.
 Todos los archivos deberán escribirse en español.
 
 
 # Cuando usar este skill
-Utilice este skill cada vez que necesite reanudar el desarrollo del proyecto PremiumTel después de una pausa, para asegurarse de que comprende el estado actual del proyecto y las tareas pendientes, Cada vez que se hace un git pull o cada vez que se pida reanudar el proyecto.
+Utilice este skill cada vez que necesite reanudar el desarrollo del proyecto en curso después de una pausa, para asegurarse de que comprende el estado actual del proyecto y las tareas pendientes, Cada vez que se hace un git pull o cada vez que se pida reanudar el proyecto.
 
 # Instrucciones
 1. Lea el archivo SESSION_RESUME.md para obtener una visión general del proyecto y su estado

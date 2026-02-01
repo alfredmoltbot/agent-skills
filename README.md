@@ -9,6 +9,7 @@ Aquí se irán dejando documentados los patrones, técnicas y mejores prácticas
 ## Contenido
 
 - **[fastapi-mysql-alembic](fastapi-mysql-alembic/)** - Guía para desarrollar sistemas backend con FastAPI, MySQL y Alembic de manera incremental en sesiones interactivas múltiples. Incluye patrones para proyectos modulares, migraciones versionadas y desarrollo colaborativo por agentes.
+- **[resumable-session](resumable-session/)** - Instrucciones para reanudar el desarrollo en un proyecto, permitiendo que el agente se ponga al día rápidamente con el estado actual y las tareas pendientes.
 
 ## Uso
 
